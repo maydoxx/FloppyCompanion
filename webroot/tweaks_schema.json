@@ -166,6 +166,17 @@
           "requires": null
         },
         {
+          "id": "lmkd",
+          "cardId": "lmkd-card",
+          "pendingId": "lmkd-pending-indicator",
+          "type": "custom",
+          "templateId": "tpl-lmkd",
+          "iconKey": "memory",
+          "titleKey": "tweaks.lmkd.title",
+          "tooltipKey": "tweaks.tooltip.lmkd",
+          "requires": null
+        },
+        {
           "id": "iosched",
           "cardId": "iosched-card",
           "pendingId": "iosched-pending-indicator",

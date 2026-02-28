@@ -456,6 +456,7 @@ async function initTweaksTab() {
 
     if (typeof initZramTweak === 'function') initZramTweak();
     if (typeof initMemoryTweak === 'function') initMemoryTweak();
+    if (typeof initLmkdTweak === 'function') initLmkdTweak();
     if (typeof initIoSchedulerTweak === 'function') initIoSchedulerTweak();
 }
 

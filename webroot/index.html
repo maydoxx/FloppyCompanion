@@ -1047,6 +1047,177 @@
                         </div>
                     </template>
 
+                    <template id="tpl-lmkd">
+                        <div class="card-content">
+                            <div class="tweak-row" style="border-bottom: none;">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.usePsi">Use PSI Monitors</span>
+                                    <span class="tweak-val" id="lmkd-val-use_psi">--</span>
+                                </div>
+                                <div class="tweak-switch-container">
+                                    <label class="m3-switch" style="display:inline-block; margin:0;">
+                                        <input type="checkbox" id="lmkd-toggle-use_psi">
+                                        <span class="m3-switch-track"><span class="m3-switch-thumb"></span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tweak-row" style="margin-top: 12px; border-bottom: none;">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.useMinfreeLevels">Use Minfree Levels</span>
+                                    <span class="tweak-val" id="lmkd-val-use_minfree_levels">--</span>
+                                </div>
+                                <div class="tweak-switch-container">
+                                    <label class="m3-switch" style="display:inline-block; margin:0;">
+                                        <input type="checkbox" id="lmkd-toggle-use_minfree_levels">
+                                        <span class="m3-switch-track"><span class="m3-switch-thumb"></span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tweak-row" style="margin-top: 12px; border-bottom: none;">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.criticalUpgrade">Critical Upgrade</span>
+                                    <span class="tweak-val" id="lmkd-val-critical_upgrade">--</span>
+                                </div>
+                                <div class="tweak-switch-container">
+                                    <label class="m3-switch" style="display:inline-block; margin:0;">
+                                        <input type="checkbox" id="lmkd-toggle-critical_upgrade">
+                                        <span class="m3-switch-track"><span class="m3-switch-thumb"></span></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="tweak-row" style="margin-top: 12px; border-bottom: none;">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.killHeaviestTask">Kill Heaviest Task</span>
+                                    <span class="tweak-val" id="lmkd-val-kill_heaviest_task">--</span>
+                                </div>
+                                <div class="tweak-switch-container">
+                                    <label class="m3-switch" style="display:inline-block; margin:0;">
+                                        <input type="checkbox" id="lmkd-toggle-kill_heaviest_task">
+                                        <span class="m3-switch-track"><span class="m3-switch-thumb"></span></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.low">Low oom_adj</span>
+                                    <span class="tweak-val" id="lmkd-val-low">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-low" class="styled-input" placeholder="1001">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.medium">Medium oom_adj</span>
+                                    <span class="tweak-val" id="lmkd-val-medium">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-medium" class="styled-input" placeholder="800">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.critical">Critical oom_adj</span>
+                                    <span class="tweak-val" id="lmkd-val-critical">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-critical" class="styled-input" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.upgradePressure">Upgrade Pressure</span>
+                                    <span class="tweak-val" id="lmkd-val-upgrade_pressure">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-upgrade_pressure" class="styled-input" placeholder="100">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.downgradePressure">Downgrade Pressure</span>
+                                    <span class="tweak-val" id="lmkd-val-downgrade_pressure">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-downgrade_pressure" class="styled-input" placeholder="100">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.killTimeout">Kill Timeout (ms)</span>
+                                    <span class="tweak-val" id="lmkd-val-kill_timeout_ms">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-kill_timeout_ms" class="styled-input" placeholder="0">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.psiPartialStall">PSI Partial Stall (ms)</span>
+                                    <span class="tweak-val" id="lmkd-val-psi_partial_stall_ms">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-psi_partial_stall_ms" class="styled-input" placeholder="70">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.psiCompleteStall">PSI Complete Stall (ms)</span>
+                                    <span class="tweak-val" id="lmkd-val-psi_complete_stall_ms">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-psi_complete_stall_ms" class="styled-input" placeholder="700">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.thrashingLimit">Thrashing Limit</span>
+                                    <span class="tweak-val" id="lmkd-val-thrashing_limit">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-thrashing_limit" class="styled-input" placeholder="100">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.thrashingLimitDecay">Thrashing Limit Decay</span>
+                                    <span class="tweak-val" id="lmkd-val-thrashing_limit_decay">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-thrashing_limit_decay" class="styled-input" placeholder="10">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.swapUtilMax">Swap Util Max</span>
+                                    <span class="tweak-val" id="lmkd-val-swap_util_max">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-swap_util_max" class="styled-input" placeholder="100">
+                                </div>
+                            </div>
+                            <div class="tweak-row">
+                                <div class="tweak-info-col">
+                                    <span class="tweak-label" data-i18n="tweaks.lmkd.swapFreeLowPercentage">Swap Free Low %</span>
+                                    <span class="tweak-val" id="lmkd-val-swap_free_low_percentage">--</span>
+                                </div>
+                                <div class="tweak-input-container">
+                                    <input type="number" id="lmkd-swap_free_low_percentage" class="styled-input" placeholder="20">
+                                </div>
+                            </div>
+
+                            <div class="tweak-actions">
+                                <button class="tweak-action-btn secondary" id="lmkd-btn-save"
+                                    data-i18n="tweaks.save">Save</button>
+                                <button class="tweak-action-btn secondary" id="lmkd-btn-apply"
+                                    data-i18n="tweaks.apply">Apply</button>
+                                <button class="tweak-action-btn primary" id="lmkd-btn-save-apply"
+                                    data-i18n="tweaks.saveApply">Save & Apply</button>
+                            </div>
+                        </div>
+                    </template>
+
                     <template id="tpl-iosched">
                         <div class="card-content">
                             <div id="iosched-devices-container" class="tweak-container"></div>
@@ -1410,6 +1581,7 @@
     <!-- Shared tweaks (platform-agnostic) -->
     <script src="js/tweaks/shared/zram.js"></script>
     <script src="js/tweaks/shared/memory.js"></script>
+    <script src="js/tweaks/shared/lmkd.js"></script>
     <script src="js/tweaks/shared/iosched.js"></script>
     <!-- Platform-specific tweaks -->
     <script src="js/tweaks/floppy1280/thermal.js"></script>

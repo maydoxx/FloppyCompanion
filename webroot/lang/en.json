@@ -166,6 +166,29 @@
             "vfsCachePressure": "VFS Cache Pressure",
             "watermarkScale": "Watermark Scale"
         },
+        "lmkd": {
+            "title": "Low Memory Killer daemon",
+            "usePsi": "Use PSI Monitors",
+            "useMinfreeLevels": "Use Minfree Levels",
+            "low": "Low oom_adj",
+            "medium": "Medium oom_adj",
+            "critical": "Critical oom_adj",
+            "criticalUpgrade": "Critical Upgrade",
+            "upgradePressure": "Upgrade Pressure",
+            "downgradePressure": "Downgrade Pressure",
+            "killHeaviestTask": "Kill Heaviest Task",
+            "killTimeout": "Kill Timeout",
+            "psiPartialStall": "PSI Partial Stall",
+            "psiCompleteStall": "PSI Complete Stall",
+            "thrashingLimit": "Thrashing Limit",
+            "thrashingLimitDecay": "Thrashing Limit Decay",
+            "swapUtilMax": "Swap Util Max",
+            "swapFreeLowPercentage": "Swap Free Low %",
+            "enabled": "Enabled",
+            "disabled": "Disabled",
+            "requiresLegacyMinfree": "Requires legacy memcg (cgroup v1)",
+            "requiresVmpressureFallback": "Disabling requires vmpressure fallback (cgroup v1)"
+        },
         "iosched": {
             "ioScheduler": "I/O Scheduler"
         },
@@ -259,6 +282,7 @@
         "tooltip": {
             "zram": "Compressed RAM block device. Helps multitasking by compressing data in RAM. Usually, higher size translates to more apps fitting in ZRAM.",
             "memory": "Settings to control the Linux Virtual Memory (VM) subsystem. Adjusts how the kernel balances performance, battery life, and multitasking.",
+            "lmkd": "Runtime overrides for Android's low memory killer daemon. These map to persist.device_config.lmkd_native.* properties and trigger an lmkd reinit.",
             "gpu": "Sets the maximum GPU frequency. Higher values improve performance but use more battery.",
             "display": "HBM boosts max brightness under sunlight. CABC adjusts backlight based on content to save power.",
             "ioScheduler": "Algorithm used to order and merge I/O requests. Affects storage performance and latency.",

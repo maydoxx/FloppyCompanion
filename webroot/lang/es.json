@@ -166,6 +166,29 @@
             "vfsCachePressure": "Presión de caché VFS",
             "watermarkScale": "Escala de watermark"
         },
+        "lmkd": {
+            "title": "Daemon Low Memory Killer",
+            "usePsi": "Usar monitores PSI",
+            "useMinfreeLevels": "Usar niveles minfree",
+            "low": "oom_adj bajo",
+            "medium": "oom_adj medio",
+            "critical": "oom_adj crítico",
+            "criticalUpgrade": "Escalada crítica",
+            "upgradePressure": "Presión de subida",
+            "downgradePressure": "Presión de bajada",
+            "killHeaviestTask": "Matar tarea más pesada",
+            "killTimeout": "Tiempo de espera de kill",
+            "psiPartialStall": "PSI de bloqueo parcial",
+            "psiCompleteStall": "PSI de bloqueo completo",
+            "thrashingLimit": "Límite de thrashing",
+            "thrashingLimitDecay": "Decaimiento de límite de thrashing",
+            "swapUtilMax": "Uso máx. de swap",
+            "swapFreeLowPercentage": "% bajo de swap libre",
+            "enabled": "Activado",
+            "disabled": "Desactivado",
+            "requiresLegacyMinfree": "Requiere memcg legacy (cgroup v1)",
+            "requiresVmpressureFallback": "Desactivarlo requiere fallback de vmpressure (cgroup v1)"
+        },
         "iosched": {
             "title": "Scheduler de E/S",
             "ioScheduler": "Planificador E/S"
@@ -260,6 +283,7 @@
         "tooltip": {
             "zram": "Dispositivo de bloque de RAM comprimida. Ayuda a la multitarea comprimiendo datos en la RAM. Generalmente, un mayor tamaño significa que caben más apps en ZRAM.",
             "memory": "Ajustes para controlar el subsistema de Memoria Virtual (VM) de Linux. Ajusta cómo el kernel equilibra rendimiento, batería y multitarea.",
+            "lmkd": "Overrides en tiempo de ejecución para el daemon low memory killer de Android. Se mapean a propiedades persist.device_config.lmkd_native.* y fuerzan una reinicialización de lmkd.",
             "gpu": "Ajusta la frecuencia máxima de GPU. Valores más altos mejoran rendimiento pero consumen más batería.",
             "charging": "Configura el comportamiento de carga avanzado.",
             "chargingBypass": "Detiene la carga de la batería y alimenta el dispositivo directamente por USB. Útil para juegos.",

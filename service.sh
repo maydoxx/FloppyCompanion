@@ -34,6 +34,11 @@ if [ -f "$MODDIR/tweaks/memory.sh" ]; then
     sh "$MODDIR/tweaks/memory.sh" apply_saved
 fi
 
+# LMKD
+if [ -f "$MODDIR/tweaks/lmkd.sh" ]; then
+    sh "$MODDIR/tweaks/lmkd.sh" apply_saved
+fi
+
 # I/O Scheduler
 if [ -f "$MODDIR/tweaks/iosched.sh" ]; then
     sh "$MODDIR/tweaks/iosched.sh" apply_saved

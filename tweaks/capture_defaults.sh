@@ -94,6 +94,25 @@ cat > "$OUTPUT_FILE" << EOF
       "vfs_cache_pressure": "$(cat /proc/sys/vm/vfs_cache_pressure 2>/dev/null || echo 100)",
       "watermark_scale_factor": "$(cat /proc/sys/vm/watermark_scale_factor 2>/dev/null || echo 10)"
     },
+    "lmkd": {
+$(
+if [ -f "$MODDIR/tweaks/lmkd.sh" ]; then
+    sh "$MODDIR/tweaks/lmkd.sh" get_defaults | \
+    awk '
+    BEGIN { first=1 }
+    {
+        split($0, kv, "=")
+        key=kv[1]
+        val=substr($0, length(key) + 2)
+        if (key == "") next
+        if (!first) printf ",\n"
+        printf "      \"%s\": \"%s\"", key, val
+        first=0
+    }
+    '
+fi
+)
+    },
     "iosched": {
 $(
 if [ -f "$MODDIR/tweaks/iosched.sh" ]; then
